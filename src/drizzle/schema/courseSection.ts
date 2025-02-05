@@ -27,7 +27,7 @@ export const CourseSectionRelationships = relations(
   CourseSectionTable,
   ({ one, many }) => ({
     course: one(CourseTable, {
-      fields: [CourseSectionTable.id],
+      fields: [CourseSectionTable.courseId],
       references: [CourseTable.id],
     }),
     lessons: many(LessonTable),

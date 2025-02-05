@@ -29,16 +29,13 @@ export const PurchaseTable = pgTable("purchases", {
   updatedAt,
 });
 
-export const PurchaseTableRelationships = relations(
-  PurchaseTable,
-  ({ one }) => ({
-    user: one(UserTable, {
-      fields: [PurchaseTable.userId],
-      references: [UserTable.id],
-    }),
-    product: one(ProductTable, {
-      fields: [PurchaseTable.productId],
-      references: [ProductTable.id],
-    }),
-  })
-);
+export const PurchaseRelationships = relations(PurchaseTable, ({ one }) => ({
+  user: one(UserTable, {
+    fields: [PurchaseTable.userId],
+    references: [UserTable.id],
+  }),
+  product: one(ProductTable, {
+    fields: [PurchaseTable.productId],
+    references: [ProductTable.id],
+  }),
+}));

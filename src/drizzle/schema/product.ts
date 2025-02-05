@@ -8,14 +8,14 @@ export type ProductStatus = (typeof productStatuses)[number];
 export const productStatusEnum = pgEnum("product_status", productStatuses);
 
 export const ProductTable = pgTable("products", {
-  id: id,
+  id,
   name: text().notNull(),
   description: text().notNull(),
   imageUrl: text().notNull(),
-  priceInRupees: integer().notNull(),
+  priceInDollars: integer().notNull(),
   status: productStatusEnum().notNull().default("private"),
-  createdAt: createdAt,
-  updatedAt: updatedAt,
+  createdAt,
+  updatedAt,
 });
 
 export const ProductRelationships = relations(ProductTable, ({ many }) => ({

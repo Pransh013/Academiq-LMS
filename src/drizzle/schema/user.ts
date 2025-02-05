@@ -1,7 +1,6 @@
 import { relations } from "drizzle-orm";
 import { pgEnum, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import { createdAt, id, updatedAt } from "../schemaHelper";
-import { CourseSectionTable } from "./courseSection";
 import { UserCourseAccessTable } from "./userCourseAccess";
 
 export const userRoles = ["admin", "user"] as const;
@@ -16,8 +15,8 @@ export const UserTable = pgTable("users", {
   role: userRoleEnum().notNull().default("user"),
   imageUrl: text(),
   deletedAt: timestamp({ withTimezone: true }),
-  createdAt: createdAt,
-  updatedAt: updatedAt,
+  createdAt,
+  updatedAt,
 });
 
 export const UserRelationships = relations(UserTable, ({ many }) => ({
