@@ -21,7 +21,7 @@ export const UserLessonCompleteTable = pgTable(
 
 export const UserLessonCompleteRelationships = relations(
   UserLessonCompleteTable,
-  ({ one, many }) => ({
+  ({ one }) => ({
     user: one(UserTable, {
       fields: [UserLessonCompleteTable.userId],
       references: [UserTable.id],
