@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { hasAdminAccess } from "@/permissions/general";
+import { hasAdminAccess } from "@/lib/utils";
 import { getCurrentUser } from "@/services/clerk";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";

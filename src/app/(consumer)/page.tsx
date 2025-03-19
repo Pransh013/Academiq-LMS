@@ -1,5 +1,3 @@
-export default function Home() {
-  return (
-    <div>Consumer</div>
-  );
+export default function ConsumerPage() {
+  return <div>Consumer</div>;
 }
