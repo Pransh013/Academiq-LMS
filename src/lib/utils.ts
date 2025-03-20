@@ -1,12 +1,10 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
-import { UserRole } from "@/drizzle/schema";
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
-
-export const hasAdminAccess = ({ role }: { role: UserRole | undefined }) => {
+export const hasAdminAccess = (role: string): boolean => {
   return role === "admin";
 };

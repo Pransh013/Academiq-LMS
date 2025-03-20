@@ -1,4 +1,4 @@
-import AppSidebarAdmin from "@/components/AppSidebarAdmin";
+import AppSidebar from "@/components/AppSidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,7 +22,7 @@ export default function AdminLayout({
 }>) {
   return (
     <SidebarProvider>
-      <AppSidebarAdmin />
+      <AppSidebar />
       <SidebarInset>
         <header className="flex h-16 shrink-0 justify-between items-center gap-2 border-b">
           <div className="flex items-center gap-2 px-4">

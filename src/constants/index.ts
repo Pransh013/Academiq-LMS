@@ -3,6 +3,11 @@ import { BookOpen, Bot, SquareTerminal } from "lucide-react";
 export const adminSidebarData = {
   navMain: [
     {
+      title: "Home",
+      url: "/admin",
+      icon: SquareTerminal,
+    },
+    {
       title: "Courses",
       url: "/admin/courses",
       icon: SquareTerminal,
@@ -23,6 +28,11 @@ export const adminSidebarData = {
 export const consumerSidebarData = {
   navMain: [
     {
+      title: "Home",
+      url: "/",
+      icon: SquareTerminal,
+    },
+    {
       title: "My Courses",
       url: "/courses",
       icon: SquareTerminal,
@@ -33,7 +43,7 @@ export const consumerSidebarData = {
       icon: BookOpen,
     },
     {
-      title: "Purchases",
+      title: "Purchase History",
       url: "/purchases",
       icon: Bot,
     },
