@@ -1,4 +1,5 @@
 import AppSidebar from "@/components/AppSidebar";
+import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -45,7 +46,8 @@ export default function AdminLayout({
               </BreadcrumbList>
             </Breadcrumb>
           </div>
-          <div className="flex-1 max-w-1/2 px-4 gap-2">
+          <div className="flex-1 flex items-center justify-between max-w-1/2 px-4 gap-2">
+            <Badge className="">Admin</Badge>
             <div className="size-10">
               <UserButton
                 appearance={{
@@ -57,7 +59,7 @@ export default function AdminLayout({
             </div>
           </div>
         </header>
-        <div className="flex flex-1 px-8 py-4">{children}</div>
+        <div className="flex flex-1 px-16 py-8">{children}</div>
       </SidebarInset>
     </SidebarProvider>
   );

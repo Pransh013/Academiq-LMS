@@ -21,27 +21,21 @@ export default function AppSidebar({
   const pathname = usePathname();
   const isAdminRoute = pathname.startsWith("/admin");
   const sidebarData = isAdminRoute ? adminSidebarData : consumerSidebarData;
-  console.log(isAdminRoute, pathname);
 
   return (
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild className="h-20">
+            <SidebarMenuButton size="lg" asChild className="">
               <Link href={isAdminRoute ? "/admin" : "/"}>
                 <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                   <Command className="size-4" />
                 </div>
-                <div className="grid relative flex-1 text-left text-sm leading-tight">
+                <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate text-xl font-medium">
                     AcademiQ LMS
                   </span>
-                  {isAdminRoute && (
-                    <Badge className="absolute right-0 bottom-full z-50">
-                      Admin
-                    </Badge>
-                  )}
                 </div>
               </Link>
             </SidebarMenuButton>

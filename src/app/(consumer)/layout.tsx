@@ -48,7 +48,7 @@ export default function ConsumerLayout({
               </BreadcrumbList>
             </Breadcrumb>
           </div>
-          <div className="flex border w-1/2 justify-between items-center">
+          <div className="flex w-1/2 justify-between items-center">
             <Suspense>
               <SignedIn>
                 <AdminLink />

@@ -1,4 +1,4 @@
-type CACHE_TAG = "users" | "products";
+type CACHE_TAG = "users" | "products" | "courses";
 
 export const getGlobalTag = (tag: CACHE_TAG) => {
   return `global:${tag}` as const;

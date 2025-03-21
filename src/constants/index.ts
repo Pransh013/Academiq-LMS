@@ -11,6 +11,7 @@ export const adminSidebarData = {
       title: "Courses",
       url: "/admin/courses",
       icon: SquareTerminal,
+      items: [{ title: "New Course", url: "/admin/courses/new" }],
     },
     {
       title: "Products",
